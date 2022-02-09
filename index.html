@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Been Together</title>
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="./images/favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css?family=Montez" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="./css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="./css/icomoon.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="./css/bootstrap.css">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/custom.css">
+
+    </head>
+    <body>
+        <div id="rose-falling">
+            <div id="fh5co-wrapper">
+                <div id="fh5co-page">
+                    <div id="fh5co-couple" class="fh5co-section-gray fullscreen rose-falling">
+                        <div class="container">
+                            <div class="row row-bottom-padded-md animate-box">
+                                <div class="col-md-6 col-md-offset-3 text-center">
+                                    <div class="col-md-5 col-sm-5 col-xs-5 nopadding">
+                                        <img src="./images/viet.jpg" class="img-responsive">
+                                        <h3 style="margin: 5px; color: #F69D9D;"><strong>Công Việt</strong></h3>
+                                        <p><strong>27.11.1996</strong></p>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2 col-xs-2 nopadding">
+                                        <h2 class="amp-center">
+                                            <i class="icon-heart4"></i>
+                                        </h2>
+                                    </div>
+                                    <div class="col-md-5 col-sm-5 col-xs-5 nopadding">
+                                        <img src="./images/thu.jpg" class="img-responsive">
+                                        <h3 style="margin: 5px; color: #F69D9D;"><strong>Minh Thu</strong></h3>
+                                        <p><strong>23.07.2000</strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row animate-box">
+                                <div class="col-md-8 col-md-offset-2">
+                                    <div class="col-md-12 text-center heading-section">
+                                        <h2><strong id="days"></strong></h2>
+                                        <h3><strong id="timer"></strong></h3>
+                                        <p><strong id="continue"></strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <script src="./js/scripts.min.js"></script>
+    <script src="./js/TweenMax.min.js"></script>
+    <script src="./js/custom.js"></script>
+    <script>
+        TweenLite.set("#rose-falling",{perspective:600})
+
+        var total = 100;
+        var warp = document.getElementById("rose-falling"),
+            w = window.innerWidth , h = window.innerHeight;
+
+        for (i=0; i<total; i++){
+            var Div = document.createElement('div');
+            TweenLite.set(Div,{attr:{class:'dot'},x:R(0,w),y:R(-920,-920),z:R(-200,200)});
+            warp.appendChild(Div);
+            animm(Div);
+        }
+
+        function animm(elm){
+            TweenMax.to(elm,R(6,15),{y:h+100,ease:Linear.easeNone,repeat:-1,delay:-15});
+            TweenMax.to(elm,R(4,8),{x:'+=100',rotationZ:R(0,180),repeat:-1,yoyo:true,ease:Sine.easeInOut});
+            TweenMax.to(elm,R(2,8),{rotationX:R(0,360),rotationY:R(0,360),repeat:-1,yoyo:true,ease:Sine.easeInOut,delay:-5});
+        };
+
+        function R(min,max) {return min+Math.random()*(max-min)};
+    </script>
+    </body>
+</html>
+
