@@ -1,10 +1,10 @@
 window.onload = function() {
-    countUpFromTime('2019-07-23');
+    countUpFromTime();
 };
 
-function countUpFromTime(date) {
+function countUpFromTime() {
     // Set the date we're counting up to
-    var startDate = new Date(date);
+    var startDate = new Date(2019, 7, 23);
 
     // Update the count up every 1 second
     setInterval(function() {
