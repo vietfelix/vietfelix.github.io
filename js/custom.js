@@ -4,7 +4,8 @@ window.onload = function() {
 
 function countUpFromTime() {
     // Set the date we're counting up to
-    var startDate = new Date(2019, 7, 23);
+    // new Date auto plus one month
+    var startDate = new Date(2019, 6, 23); // 2019/07/23
 
     // Update the count up every 1 second
     setInterval(function() {
