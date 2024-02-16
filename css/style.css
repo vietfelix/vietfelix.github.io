@@ -39,7 +39,7 @@ a:hover {
 }
 
 p, ul, ol {
-  margin-bottom: 1.5em;
+  margin-bottom: 10px;
   font-size: 16px;
   color: #848484;
   font-family: "Open Sans", Arial, sans-serif;
@@ -49,7 +49,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #5a5a5a;
   font-family: "Montez", cursive;
   font-weight: 400;
-  margin: 0 0 30px 0;
+  margin: 0 0 10px 0;
 }
 
 figure {
@@ -566,6 +566,14 @@ figure {
   font-size: 50px;
   font-weight: 300;
   position: relative;
+  color: #F69D9D;
+}
+
+.heading-section h3.countdown {
+  color: #ffe3e3;
+}
+
+.heading-section h3.countdown span {
   color: #F69D9D;
 }
 

@@ -1,5 +1,6 @@
 window.onload = function() {
     countUpFromTime();
+    countdownToDate();
 };
 
 function countUpFromTime() {
@@ -26,4 +27,15 @@ function countUpFromTime() {
         document.getElementById('timer').innerHTML = hours + ' Hour ' + minutes + ' Minutes ' + seconds + ' Seconds';
         document.getElementById('continue').innerHTML = '<i class="icon-heart4"></i> #shmily #thuvi #been_together #to_be_continued <i class="icon-heart4"></i>';
     }, 1000);
+}
+
+function countdownToDate() {
+    var now = new Date();
+    var date = new Date(2025, 3, 23);
+
+    var timeDiff = date.getTime() - now.getTime();
+
+    var days = Math.ceil(timeDiff / (1000 * 3600 * 24));
+
+    document.getElementById('countdown').innerHTML = days;
 }
