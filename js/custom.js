@@ -23,15 +23,15 @@ function countUpFromTime() {
         // var minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
         // var seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
 
-        document.getElementById('days').innerHTML = 'Together ' + days + ' Days';
+        document.getElementById('days').innerHTML = days;
         // document.getElementById('timer').innerHTML = hours + ' Hour ' + minutes + ' Minutes ' + seconds + ' Seconds';
-        document.getElementById('continue').innerHTML = '<i class="icon-heart4"></i> #shmily #thuvi #been_together #to_be_continued <i class="icon-heart4"></i>';
+        // document.getElementById('continue').innerHTML = '<i class="icon-heart4"></i> #shmily #thuvi #been_together #to_be_continued <i class="icon-heart4"></i>';
     }, 1000);
 }
 
 function countdownToDate() {
     var now = new Date();
-    var date = new Date(2025, 3, 23);
+    var date = new Date(2025, 3, 23); // 2025/04/23
 
     var timeDiff = date.getTime() - now.getTime();
 
