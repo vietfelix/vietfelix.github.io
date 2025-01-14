@@ -31,7 +31,7 @@ function countUpFromTime() {
 
 function countdownToDate() {
     var now = new Date();
-    var date = new Date(2025, 3, 23); // 2025/04/23
+    var date = new Date(2025, 2, 25); // 2025/03/25
 
     var timeDiff = date.getTime() - now.getTime();
 
